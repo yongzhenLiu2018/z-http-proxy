@@ -3,7 +3,7 @@ const proxy = require('express-http-proxy');
 const app = express();
 
 // 配置代理目标地址
-const BASE_URL = 'https://ceshidizhi.com';
+const BASE_URL = 'https://ceshidizhi.com';    //这里设置你的远程服务器地址
 const PORT = 3000;
 
 // 使用 express-http-proxy 来代理请求
@@ -24,7 +24,7 @@ app.use(
             return proxyReqOpts;
         },
 
-        timeout: 2000, // 响应超时设置 (7秒)
+        timeout: 5000, // 响应超时设置 (7秒)
     })
 );
 
